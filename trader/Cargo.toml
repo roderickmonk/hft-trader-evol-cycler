@@ -1,0 +1,12 @@
+[package]
+name = "trader"
+version = "0.1.0"
+authors = ["roderickmonk <roderickmonk@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+itertools = "*"
+redis = "*"
+chrono = "*"
+rustc-serialize = "*"
+trader-util = { path = "../trader-util" }

@@ -1,0 +1,15 @@
+[package]
+name = "compute_orders_neon"
+version = "0.1.1"
+
+[lib]
+name = "compute_orders_neon"
+crate-type = ["dylib"]
+
+[dependencies]
+neon = "0.10.1"
+itertools = "0.10.3"
+redis = "*"
+chrono = "*"
+rustc-serialize = "*"
+trader = { path = "../trader" }
