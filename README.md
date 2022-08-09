@@ -17,7 +17,7 @@ This repo contains 3 crates:
 `native` is the executive crate which carries out the formalisms required by Neon.  Ultimately it creates an export referred to as `EngineEvol` which in turn calls upon a task referred to as `ComputerOrdersTask`.  A `task` is a concept defined by Neon.  Within `ComputerOrdersTask` find a function `compute` which in turn calls the routine trader::compute_orders (found in the `trader` crate which is discussed in the next section).  Note that a fair amount of the code found in this crate is given over to the marshalling of the input parameters into a form usable from the subsequent Rust code.
 
 ### trader ###
-This routine contains the specifics of the code for the Evol Cycler trader.  Little attempt is made to explain it here, but do not that it calls upon the trader-util crate for a number of utility functions (which are discussed next).
+This routine contains the specifics of the code for the Evol Cycler trader.  Little attempt is made to explain it here, but do note that it calls upon the trader-util crate for a number of utility functions (which are discussed next).
 
 The public function, called from `native` is the routine `compute_orders`.  It in turn calls:
 * trader_util::get_pv_and_rates()
