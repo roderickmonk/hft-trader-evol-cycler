@@ -20,13 +20,18 @@ This repo contains 3 crates:
 This routine contains the specifics of the code for the Evol Cycler trader.  Little attempt is made to explain it here, but do not that it calls upon the trader-util crate for a number of utility functions (which are discussed next).
 
 The public function, called from `native` is the routine `compute_orders`.  It in turn calls:
-* trader_util::get_pv_and_rates
-* 
+* trader_util::get_pv_and_rates()
+* evol() # A local function specific to this trader
+* maximize_profit() # A local function specific to this trader
+  
+A number of test routines are also provided.
 ### trader-util
 This crate contains a number of general purpose utility functions.  These are:
+* get_pv_and_rates ()
 * A binary search routine
 * A 2D interpolation routine
 * A routine to save to a Redis instance
 * A routine to publish to an instance of Redis Pub/Sub 
 
+A number of test routines are also provided.
 
