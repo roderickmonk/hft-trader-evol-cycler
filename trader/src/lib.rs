@@ -98,8 +98,6 @@ pub fn compute_orders(
         println! ("quantity_limit: {}", quantity_limit);
         println! ("hft_sim_testing: {}", hft_sim_testing);
         println! ("allow_order_conflicts: {}", allow_order_conflicts);
-        // println! ("pdf_x: {:?}", pdf_x);
-        // println! ("pdf_y: {:?}", pdf_y);
     }
 
     let mut buy_rates: Vec<f64> = Vec::with_capacity(in_buy_rates.len());
