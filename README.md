@@ -8,6 +8,6 @@ It is meant to be called from NodeJS using the Neon binder (https://neon-binding
 Little information is provided here describing the specifics of the trading decision process, as the prime focus for this repo is to demonstrate a typical NEON / Rust usage (albeit a careful study of the code would reveal all, if the reader so desired).
 
 En route and if configured so, the code is capable of the following:
-1. Record the following to an instance of Redis: a the orderbook, all input parameters, and the resulting buy/sell decision (note: a buy / sell decision of (-1, -1) means to cancel any existing orders from both sides).
-2. Publish the buy/sell decision to Redis (from which a bespoke backtester reads such data; the backtester is not discussed further here).
+1. Record the following to an instance of Redis: the current orderbook, all other input parameters, and the resulting buy/sell decision (note: a buy / sell decision of (-1, -1) means to cancel any existing orders from both sides).
+2. Publish the buy/sell decision to Redis (from which a bespoke backtester is listening; the backtester is not discussed further here).
 
