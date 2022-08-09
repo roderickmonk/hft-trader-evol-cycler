@@ -9,5 +9,5 @@ Little information is provided here describing the specifics of the trading deci
 
 En route and if configured so, the code is capable of the following:
 1. Record the following to an instance of Redis: the current orderbook, all other input parameters, and the resulting buy/sell decision (note: a buy / sell decision of (-1, -1) means to cancel any existing orders from both sides).
-2. Publish the buy/sell decision to Redis (from which a bespoke backtester is listening; the backtester is not discussed further here).
+2. Publish the buy/sell decision to Redis (a bespoke 'backtester' subscribes to such Redis messaging; the backtester is not discussed further here).
 
